@@ -1,5 +1,5 @@
 
-public class AddressBook {
+public class Contacts {
 	private String firstname;
     private String lastname;
     private long phoneNumber;
@@ -8,7 +8,7 @@ public class AddressBook {
     private long zipcode;
     private String city;
     private String state;
-	public AddressBook(String firstname, String lastname, long phoneNumber, String emailId, String address,
+	public Contacts(String firstname, String lastname, long phoneNumber, String emailId, String address,
 			long zipcode, String city, String state) {
 		super();
 		this.firstname = firstname;
@@ -29,7 +29,7 @@ public class AddressBook {
 	public static void main(String args[])
 	{
 		System.out.println("Welcome to Address Book Program");
-		AddressBook Contactno1= new AddressBook("Deepanjan","Sharma",273689,"deepanjansharma43@gmail.com","Kahalgaon",813214,"Bhagalpur","Bihar");
+		Contacts Contactno1= new Contacts("Deepanjan","Sharma",273689,"deepanjansharma43@gmail.com","Kahalgaon",813214,"Bhagalpur","Bihar");
 		System.out.println(Contactno1);
 	}
 	
