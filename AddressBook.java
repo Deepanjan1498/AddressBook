@@ -1,36 +1,27 @@
+import java.util.ArrayList;
+public class AddressBook
+{
+        int numOfContact=0;
+        private Contacts[] contactArray;
 
-public class AddressBook {
-	private String firstname;
-    private String lastname;
-    private long phoneNumber;
-    private String emailId;
-    private String address;
-    private long zipcode;
-    private String city;
-    private String state;
-	public AddressBook(String firstname, String lastname, long phoneNumber, String emailId, String address,
-			long zipcode, String city, String state) {
-		super();
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.phoneNumber = phoneNumber;
-		this.emailId = emailId;
-		this.address = address;
-		this.zipcode = zipcode;
-		this.city = city;
-		this.state = state;
-   }
-	@Override
-	public String toString() {
-		return "AddressBook [firstname=" + firstname + ", lastname=" + lastname + ", phoneNumber=" + phoneNumber
-				+ ", emailId=" + emailId + ", address=" + address + ", zipcode=" + zipcode + ", city=" + city
-				+ ", state=" + state + "]";
-	}
-	public static void main(String args[])
-	{
-		System.out.println("Welcome to Address Book Program");
-		AddressBook Contactno1= new AddressBook("Deepanjan","Sharma",273689,"deepanjansharma43@gmail.com","Kahalgaon",813214,"Bhagalpur","Bihar");
-		System.out.println(Contactno1);
-	}
-	
+        public AddressBook()
+        {
+                contactArray=new Contacts[10];
+        }
+        public void addNewContact(String firstName,String lastName,int phoneNumber,String emailId,String address,long zipcode,String city,String state)
+        {
+                contactArray[numOfContact]=new Contacts(firstName,lastName,phoneNumber,emailId,address,zipcode,city,state);
+                System.out.println(contactArray[numOfContact]);
+                numOfContact++;
+        }
+
+        public static void main(String args[])
+        {
+                AddressBook Contactno1=new AddressBook();
+                Contactno1.addNewContact("Sandeep","Kumar",1456320215,"Sandeep@gmail.com","Adityapur",831014,"Jamshedpur","Jharkhand");
+                Contactno1.addNewContact("Vikash","Sharma",1356890699,"Rahul@gmail.com","Sakchi",831017,"Jamshedpur","Jharkhand");
+                Contactno1.addNewContact("Akash","Singh",1234580699,"SinghAK@gmail.com","Wasseypur",831025,"Dhanbad","Jharkhand");
+        }
 }
+
+
